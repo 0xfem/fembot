@@ -17,10 +17,7 @@
             },
             "commands": {
                 "title": "{{COM:bot.name}} - Commands",
-                "description": [
-                    "**/{{REF:chatCommands.test}}** - {{REF:commandDescs.test}}",
-                    "**/{{REF:chatCommands.info}}** - {{REF:commandDescs.info}}"
-                ],
+                "description": ["**/{{REF:chatCommands.info}}** - {{REF:commandDescs.info}}"],
                 "fields": [
                     {
                         "name": "{{REF:fields.links}}",
@@ -53,8 +50,8 @@
                     }
                 ]
             },
-            "test": {
-                "description": "Test command works!"
+            "addChannel": {
+                "description": ["Added channel #{{CHANNEL_NAME}} to list"]
             },
             "viewDateJoined": {
                 "description": "{{TARGET}} joined on {{DATE}}!"
@@ -206,11 +203,12 @@
         "commandDescs": {
             "help": "Get help with commands, permissions, FAQ, etc.",
             "info": "View bot info.",
-            "test": "Run the test command."
+            "addChannel": "Add a channel to the contraband list."
         },
         "argDescs": {
             "helpOption": "Option.",
-            "infoOption": "Option."
+            "infoOption": "Option.",
+            "addChannelOption": "Option."
         },
         "fields": {
             "commands": "Commands",
