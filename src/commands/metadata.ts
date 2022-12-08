@@ -17,8 +17,8 @@ export const ChatCommandMetadata: {
         name_localizations: Lang.getRefLocalizationMap('chatCommands.help'),
         description: Lang.getRef('commandDescs.help', Language.Default),
         description_localizations: Lang.getRefLocalizationMap('commandDescs.help'),
-        dm_permission: true,
-        default_member_permissions: undefined,
+        dm_permission: false,
+        default_member_permissions: '0',
         options: [
             {
                 ...Args.HELP_OPTION,
@@ -32,8 +32,8 @@ export const ChatCommandMetadata: {
         name_localizations: Lang.getRefLocalizationMap('chatCommands.info'),
         description: Lang.getRef('commandDescs.info', Language.Default),
         description_localizations: Lang.getRefLocalizationMap('commandDescs.info'),
-        dm_permission: true,
-        default_member_permissions: undefined,
+        dm_permission: false,
+        default_member_permissions: '0',
         options: [
             {
                 ...Args.INFO_OPTION,
@@ -41,14 +41,20 @@ export const ChatCommandMetadata: {
             },
         ],
     },
-    TEST: {
+    ADD_CHANNEL: {
         type: ApplicationCommandType.ChatInput,
-        name: Lang.getRef('chatCommands.test', Language.Default),
-        name_localizations: Lang.getRefLocalizationMap('chatCommands.test'),
-        description: Lang.getRef('commandDescs.test', Language.Default),
-        description_localizations: Lang.getRefLocalizationMap('commandDescs.test'),
-        dm_permission: true,
+        name: Lang.getRef('chatCommands.addChannel', Language.Default),
+        name_localizations: Lang.getRefLocalizationMap('chatCommands.addChannel'),
+        description: Lang.getRef('commandDescs.addChannel', Language.Default),
+        description_localizations: Lang.getRefLocalizationMap('commandDescs.addChannel'),
+        dm_permission: false,
         default_member_permissions: undefined,
+        options: [
+            {
+                ...Args.ADD_CHANNEL_OPTION,
+                required: true,
+            },
+        ],
     },
 };
 
@@ -59,8 +65,8 @@ export const MessageCommandMetadata: {
         type: ApplicationCommandType.Message,
         name: Lang.getRef('messageCommands.viewDateSent', Language.Default),
         name_localizations: Lang.getRefLocalizationMap('messageCommands.viewDateSent'),
-        default_member_permissions: undefined,
-        dm_permission: true,
+        default_member_permissions: '0',
+        dm_permission: false,
     },
 };
 
@@ -71,7 +77,7 @@ export const UserCommandMetadata: {
         type: ApplicationCommandType.User,
         name: Lang.getRef('userCommands.viewDateJoined', Language.Default),
         name_localizations: Lang.getRefLocalizationMap('userCommands.viewDateJoined'),
-        default_member_permissions: undefined,
-        dm_permission: true,
+        default_member_permissions: '0',
+        dm_permission: false,
     },
 };

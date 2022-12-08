@@ -29,6 +29,14 @@ export class Args {
             },
         ],
     };
+    public static readonly ADD_CHANNEL_OPTION: APIApplicationCommandBasicOption = {
+        name: Lang.getRef('arguments.option', Language.Default),
+        name_localizations: Lang.getRefLocalizationMap('arguments.option'),
+        description: Lang.getRef('argDescs.addChannelOption', Language.Default),
+        description_localizations: Lang.getRefLocalizationMap('argDescs.addChannelOption'),
+        type: ApplicationCommandOptionType.Channel,
+        required: true,
+    };
     public static readonly INFO_OPTION: APIApplicationCommandBasicOption = {
         name: Lang.getRef('arguments.option', Language.Default),
         name_localizations: Lang.getRefLocalizationMap('arguments.option'),
